@@ -1,0 +1,21 @@
+{
+  "name": "peduli-sehat-ml",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "ML backend for Peduli Sehat application",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "python-shell": "^5.0.0"
+  }
+}
