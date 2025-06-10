@@ -14,7 +14,13 @@ const pythonPath = isWindows
   : path.join(__dirname, "venv", "bin", "python");
 
 // Aktifkan CORS dan parsing JSON
-app.use(cors());
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json());
 
 // Sajikan file statis dari direktori saat ini
